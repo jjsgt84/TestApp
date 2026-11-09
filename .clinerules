@@ -1,0 +1,18 @@
+# Token Budget & Efficiency Directives
+
+## 1. Response Style & Conciseness
+- **No Conversational Fluff:** Omit pleasantries, irrelevant setup announcements, and repetitive introductory phrases (e.g., avoid "Here is what I did...", "Sure, I can help...").
+- **Action-First:** State the required change directly, execute the tool call, and report completion concisely.
+- **No Full File Printing:** When proposing or explaining code changes, do not output entire multi-hundred-line files in chat text. Rely strictly on targeted file editing tools and brief code snippets.
+
+## 2. File Reading & Context Management
+- **Targeted Reads:** Read only the relevant functions, components, or lines needed to solve a task. Avoid reading entire large files into context when a subset is sufficient.
+- **No Re-Reading:** Do not re-read files that are already present in the current conversation context unless they have been modified.
+- **Skip Lockfiles & Dist:** Never attempt to inspect or edit minified assets, compiled output folders (`dist/`), or package lockfiles.
+
+## 3. Terminal & Debugging Efficiency
+- **Targeted Stack Traces:** When reading terminal errors or dev server failures, extract only the specific error message and stack trace lines. Do not re-print long strings of normal build logs.
+- **Efficient Verification:** Run terminal checks or build commands directly, check exit status, and report whether the check passed or failed without dumping verbose raw stdout unless an error occurs or absolutely required for user understanding.
+
+## 4. Database Workflow Rules
+- Whenever a user feature requires a database schema change, automatically generate a local migration file in `supabase/migrations` and execute `npx supabase db push`.

@@ -1,0 +1,69 @@
+# ==========================================
+# Package Managers & Dependencies
+# ==========================================
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# ==========================================
+# Build & Compiled Outputs
+# ==========================================
+dist/
+build/
+.output/
+.vite/
+out/
+*.tsbuildinfo
+
+# ==========================================
+# Secrets & Configuration (Security + Token Saver)
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ==========================================
+# Git & Version Control
+# ==========================================
+.git/
+.github/
+
+# ==========================================
+# Logs, Caches & Temporary Files
+# ==========================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+.tmp/
+tmp/
+
+# ==========================================
+# Media, Fonts & Binary Assets
+# ==========================================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.pdf
+*.zip
+*.tar.gz
+*.mp4
+*.mp3
+*.ttf
+*.woff
+*.woff2
+
+# ==========================================
+# IDE & System Files
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
